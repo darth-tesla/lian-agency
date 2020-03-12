@@ -1,0 +1,42 @@
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1127px;
+    margin: auto;
+    padding: 27px 0 28px 0;
+  }
+  &__logo {
+    max-width: 131px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    margin-left: 40px;
+  }
+  &__link {
+    text-transform: uppercase;
+    font-family: "Roboto-Bold", "Arial", "Helvetica", sans-serif;
+    transition: 300ms;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -30px;
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: #000000;
+      transition: 300ms;
+    }
+    &:hover:before {
+      width: 20px;
+    }
+    &:hover {
+      color: #000000;
+    }
+  }
+}
