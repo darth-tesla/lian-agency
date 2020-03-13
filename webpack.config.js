@@ -106,6 +106,10 @@ module.exports = {
       {
         from: path.resolve(__dirname, "src/theme/fonts"),
         to: path.resolve(__dirname, "dist/assets/fonts")
+      },
+      {
+        from: path.resolve(__dirname, "src/theme/libs"),
+        to: path.resolve(__dirname, "dist/assets/libs")
       }
     ]),
     new MiniCssExtractPlugin({

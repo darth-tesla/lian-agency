@@ -1,5 +1,3 @@
-import * as $ from "jquery";
-
 $(document).ready(function() {
   $(".hamburger, .header__fog-area, .header__link").on("click", function() {
     $(".hamburger").toggleClass("is-active");
