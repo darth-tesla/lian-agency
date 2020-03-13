@@ -7,6 +7,14 @@ $(document).ready(function() {
     nextArrow: "<div class='title-section__next-arrow'><i class='fas fa-chevron-right'></i></div>",
     autoplay: true,
     autoplaySpeed: 7000,
-    initialSlide: 1
+    initialSlide: 1,
+    responsive: [
+      {
+        breakpoint: 470,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
 });
