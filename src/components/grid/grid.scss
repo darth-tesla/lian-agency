@@ -4,6 +4,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 26px;
+    @media(max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     position: relative;
