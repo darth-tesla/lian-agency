@@ -18,9 +18,22 @@
       visibility: visible;
       opacity: 1;
     }
+    &_visibility {
+      @media(max-width: $sm) {
+        display: block;
+      }
+    }
+    &_is-hidden {
+      @media(max-width: $sm) {
+        display: none;
+      }
+    }
   }
   &__photo {
     max-width: 100%;
+    @media(max-width: $sm) {
+      width: 100%;
+    }
   }
   &__link {
     position: absolute;
@@ -53,4 +66,8 @@
   background-color: #959595;
   color: #ffffff;
   border-radius: 5px;
+  transition: 300ms;
+  &:hover {
+    background-color: #bbbbbb;
+  }
 }

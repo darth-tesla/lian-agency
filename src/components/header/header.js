@@ -1,7 +1,16 @@
 $(document).ready(function() {
-  $(".hamburger, .header__fog-area, .header__link").on("click", function() {
+  $(".hamburger, .header__fog-area").on("click", function() {
     $(".hamburger").toggleClass("is-active");
     $(".header__nav").slideToggle();
+  });
+
+  $(".header__link").on("click", function() {
+    if ($(window).width() < 768) {
+      $(".hamburger").toggleClass("is-active");
+      $(".header__nav").slideToggle();
+    } else {
+      return;
+    }
   });
 
   $(window).resize(function() {

@@ -21,15 +21,30 @@ $(document).ready(function() {
 
   $(window).on("resize", function() {
     if ($(this).width() < 768) {
-      spreading(childsArr);
+      return spreading(childsArr);
     } else if ($(this).width() > 768) {
-      Array.from($(".appended")).forEach((item, position, arr) => {
-        for(let i = 0; i < arr.length; i++) {
-          const toGather = arr.find((item) => $(item).hasClass(`appended-${i}`));
-          $(colThree).append(toGather).removeClass(`appended appended-${i}`)
+      return Array.from($(".appended")).forEach((item, position, arr) => {
+        for (let i = 0; i < arr.length; i++) {
+          const toGather = arr.find(item => $(item).hasClass(`appended-${i}`));
+          $(colThree)
+            .append(toGather)
+            .removeClass(`appended appended-${i}`);
         }
       });
     }
   });
 
+  $(window).on("resize", function() {
+    if (
+      $(this).width() === 576 &&
+      $(".grid__item_visibility").hasClass("grid__item_is-hidden") == false
+    ) {
+      return $(".grid__item_visibility").addClass("grid__item_is-hidden");
+    }
+  });
+
+  $(".grid__btn").on("click", function(e) {
+    e.preventDefault();
+    $(".grid__item_visibility").toggleClass("grid__item_is-hidden");
+  });
 });
